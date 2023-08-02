@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CurrencyWizard.MainPage"
+             Title=""
+             BackgroundColor="#1E1E1E"
+             Shell.NavBarIsVisible="False"
+             >
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#3E554E" Offset="0.0" />
+                    <GradientStop Color="#3D856E" Offset="0.5" />
+                    <GradientStop Color="#4EBE89" Offset="1.0" />
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <ScrollView>
+                <VerticalStackLayout Spacing="10" Padding="30">
+
+                    <HorizontalStackLayout>
+                        <Label
+                            WidthRequest="200"
+                            Text="Amount"
+                            FontSize="18"
+                            Margin="0,0,100,0" />
+
+                        <Label
+                            WidthRequest="200"
+                            Text="From"
+                            FontSize="18"
+                            Margin="0,0,100,0" />
+
+                        <Label
+                            WidthRequest="200"
+                            Text="To"
+                            FontSize="18"
+                            Margin="0,0,0,0" />
+
+
+                    
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout>
+                        <Entry
+                            x:Name="textBoxAmount"
+                            WidthRequest="200"
+                            Placeholder="Enter amount here"
+                            FontSize="18"
+                            Margin="0,0,100,0" />
+
+
+                        <Picker
+                            x:Name="comboBoxFrom"
+                            WidthRequest="200"
+                            FontSize="18"
+                            Margin="0,0,100,0" />
+
+
+                        <Picker
+                            x:Name="comboBoxTo"
+                            WidthRequest="200"
+                            Margin="0,0,290,0"
+                            FontSize="18" />
+
+                        <Button
+                            x:Name="buttonCalculate"
+                            Text="Calculate"
+                            WidthRequest="200"
+                            BackgroundColor="#E0E0E0"
+                            TextColor="Black"
+                            Clicked="Calculate_Click"
+                            FontSize="18"
+                            Margin="0,0,10,0" />
+
+                    </HorizontalStackLayout>
+            
+            
+
+                    <Label
+                        Text="Conversion Result"
+                        FontSize="18" />
+
+                    <HorizontalStackLayout>
+                        <Entry
+                        WidthRequest="990"
+                        Margin="0,0,100,0"
+                        x:Name="textBoxResult"
+                        IsReadOnly="true"
+                        FontSize="18" />
+
+                        <Button
+                            x:Name="button2Confirm"
+                            Text="Confirm"
+                            Clicked="Confirm_Click"
+                            WidthRequest="200"
+                            BackgroundColor="#E0E0E0"
+                            TextColor="Black"
+                            FontSize="18" />
+
+                    </HorizontalStackLayout>
+
+                    <Label
+                        Text="Exchange History"
+                        FontSize="18" />
+            
+                    <HorizontalStackLayout>
+
+                   
+                        <Frame
+                            WidthRequest="990"
+                            HeightRequest="500"
+                            Padding="0"
+                            BackgroundColor="Transparent"
+                            BorderColor="Gray"
+                            HasShadow="False">
+                        <ListView
+                            x:Name="listViewHistory"
+                            BackgroundColor="Transparent" />
+                        </Frame>
+                        
+                    </HorizontalStackLayout>     
+                </VerticalStackLayout>
+            </ScrollView>
+    </Grid>
+
+</ContentPage>
