@@ -9,7 +9,6 @@ namespace CurrencyWizard
             if (!File.Exists(filePath))
                 return;
 
-            var cultureInfo = CultureInfo.InvariantCulture;
 
             currencyExchanges.AddRange(
                 File.ReadAllLines(filePath)
