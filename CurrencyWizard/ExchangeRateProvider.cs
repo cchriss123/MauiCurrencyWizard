@@ -17,7 +17,6 @@ namespace CurrencyWizard
                 string result = await response.Content.ReadAsStringAsync();
                 JObject json = JObject.Parse(result);
                 double rate = (double)json["rates"][toCode];
-                Console.WriteLine(json.ToString());
                 return rate;
             }
             else
